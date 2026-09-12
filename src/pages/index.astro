@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+    <main class="mt-40 mb-12 lg:mt-12 max-w-[min(90vw,750px)] lg:max-w-210">
+        <div>Coming Soon</div>
+        <footer class="mb-3 text-gray-500 text-center lg:text-sm">
+            <span data-copyright>Mfc &copy;</span>
+        </footer>
+    </main>
+</Layout>
+
+<script>
+    const getYear = new Date().getFullYear();
+    const currentYear = (getYear > 2018 ? `2018 - ` : '') + getYear;
+
+    document.querySelector('[data-copyright]').append(` ${currentYear}`);
+</script>
